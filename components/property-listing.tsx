@@ -403,16 +403,15 @@ export function PropertyListing({ id, propertyData }: PropertyListingProps) {
                         </div>
                         <span className="text-lg font-medium text-green-800">
                           {property.depositType === "No Deposit"
-                            ? "No deposit — Pay less, stress less."
-                            : "Deposit Saver — Pay less, stress less."}
+                            ? "No deposit — Rent without a deposit."
+                            : "Deposit Saver — Pay less to move in!"}
                         </span>
                       </div>
 
                       {/* Tooltip */}
                       <div className="absolute left-0 bottom-full mb-2 w-full max-w-md bg-white rounded-lg p-4 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
                         <p className="text-gray-700">
-                          This small one-time fee protects the landlord and replaces a traditional deposit. So you pay
-                          less upfront and stay in control of your money.
+                          This small one-time fee protects the landlord and replaces a traditional deposit. So you pay less upfront and stay in control of your money — that’s a win-win.
                         </p>
                       </div>
                     </div>
