@@ -376,6 +376,15 @@ export function PropertyListing({ id, propertyData }: PropertyListingProps) {
                         <div className="flex justify-between items-center">
                           <div className="flex items-center text-lg text-gray-700 font-medium">
                             <span className="ml-6">Deposit Saver</span>
+                              <Info className="h-5 w-5 text-gray-400 ml-2" />
+                             {/* Tooltip */}
+                      <div className="absolute left-0 bottom-full mb-2 w-full max-w-md bg-white rounded-lg p-4 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
+                        <p className="text-gray-700">
+                          This small one-time fee protects the landlord and replaces a traditional deposit. So you pay less upfront and stay in control of your money — that’s a win-win.
+                        </p>
+                      </div>
+                    </div>
+                  )}
                           </div>
                           <span className="text-lg font-bold text-green-600">€{Math.round(property.price * 0.05)}</span>
                         </div>
@@ -407,15 +416,6 @@ export function PropertyListing({ id, propertyData }: PropertyListingProps) {
                             : "Deposit Saver — Move in for less"}
                         </span>
                       </div>
-
-                      {/* Tooltip */}
-                      <div className="absolute left-0 bottom-full mb-2 w-full max-w-md bg-white rounded-lg p-4 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
-                        <p className="text-gray-700">
-                          This small one-time fee protects the landlord and replaces a traditional deposit. So you pay less upfront and stay in control of your money — that’s a win-win.
-                        </p>
-                      </div>
-                    </div>
-                  )}
 
                   {/* Divider */}
                   <div className="border-t pt-4">
