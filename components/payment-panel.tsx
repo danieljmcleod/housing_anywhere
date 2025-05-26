@@ -222,8 +222,8 @@ export function PaymentPanel({ isOpen, onClose, property, moveInDate, moveOutDat
                     </div>
                     <span className="text-green-800">
                       {property.depositType === "No Deposit"
-                        ? "No deposit — Pay less, stress less."
-                        : "Deposit Saver — Pay less, stress less."}
+                        ? "No deposit — Rent without a deposit."
+                        : "Deposit Saver — Pay less to move in!"}
                     </span>
                   </div>
 
