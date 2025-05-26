@@ -161,15 +161,6 @@ export function PaymentPanel({ isOpen, onClose, property, moveInDate, moveOutDat
                   </div>
                   <span className="font-semibold">€{rentalCalculations.tenantProtectionFee.toFixed(2)}</span>
 
-                  {/* Tooltip */}
-                  <div className="absolute left-0 bottom-full mb-2 w-72 bg-white border border-gray-200 rounded-md p-3 shadow-lg hidden group-hover:block z-10">
-                    <p className="text-sm text-gray-700">
-                      Similar listings ask for a damage deposit of up to 2x the monthly rent. With this place, you'll
-                      pay less upfront and stay in control of your money. It's a win-win!
-                    </p>
-                  </div>
-                </div>
-
                 <div className="flex justify-between items-center">
                   <div className="flex items-center">
                     <span>HousingAnywhere Rent Guarantee</span>
