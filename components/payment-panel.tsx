@@ -172,33 +172,41 @@ export function PaymentPanel({ isOpen, onClose, property, moveInDate, moveOutDat
                 </div>
 
                 {/* Deposit comparison for Deposit Saver properties */}
-                {property.depositType === "Deposit Saver" && (
-                  <>
-                    <div className="flex justify-between items-center">
-                      <div className="flex items-center">
-                        <span className="line-through text-gray-500">Deposit</span>
-                        <button className="ml-1">
-                          <Info className="h-4 w-4 text-gray-400" />
-                        </button>
-                      </div>
-                      <span className="font-semibold line-through text-gray-500">
-                        €{rentalCalculations.traditionalDeposit.toFixed(2)}
-                      </span>
-                    </div>
-                    <div className="flex justify-between items-center pl-4">
-                      <div className="flex items-center">
-                        <span className="text-green-700">Deposit Saver</span>
-                        <button className="ml-1">
-                          <Info className="h-4 w-4 text-gray-400" />
-                        </button>
-                      </div>
-                      <span className="font-semibold text-green-700">
-                        €{rentalCalculations.depositSaverFee.toFixed(2)}
-                      </span>
-                    </div>
-                  </>
-                )}
-              </div>
+              {property.depositType === "Deposit Saver" && (
+  <>
+    <div className="flex justify-between items-center">
+      <div className="flex items-center">
+        <span className="line-through text-gray-500">Deposit</span>
+        <button className="ml-1">
+          <Info className="h-4 w-4 text-gray-400" />
+        </button>
+      </div>
+      <span className="font-semibold line-through text-gray-500">
+        €{rentalCalculations.traditionalDeposit.toFixed(2)}
+      </span>
+    </div>
+    <div className="flex justify-between items-center pl-4">
+      <div className="flex items-center">
+        <span className="text-green-700">Deposit Saver</span>
+        {/* Tooltip moved here */}
+        <div className="relative group ml-1">
+          <button>
+            <Info className="h-4 w-4 text-gray-400" />
+          </button>
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-64 bg-white rounded-lg p-4 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-20">
+            <p className="text-gray-700">
+              This small one-time fee protects the landlord and replaces a traditional deposit. So you pay less
+              upfront and stay in control of your money — that's a win-win.
+            </p>
+          </div>
+        </div>
+      </div>
+      <span className="font-semibold text-green-700">
+        €{rentalCalculations.depositSaverFee.toFixed(2)}
+      </span>
+    </div>
+  </>
+)}
 
               {(property.depositType === "No Deposit" || property.depositType === "Deposit Saver") && (
                 <div className="bg-green-50 p-4 rounded-md my-6 relative group">
@@ -218,14 +226,7 @@ export function PaymentPanel({ isOpen, onClose, property, moveInDate, moveOutDat
                     </span>
                   </div>
 
-                  {/* Tooltip */}
-                  <div className="absolute left-0 bottom-full mb-2 w-full max-w-md bg-white rounded-lg p-4 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-20">
-                    <p className="text-gray-700">
-                      This small one-time fee protects the landlord and replaces a traditional deposit. So you pay less
-                      upfront and stay in control of your money — that's a win-win.
-                    </p>
-                  </div>
-                </div>
+    
               )}
 
               {/* Tenant protection message */}
