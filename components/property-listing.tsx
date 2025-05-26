@@ -404,7 +404,7 @@ export function PropertyListing({ id, propertyData }: PropertyListingProps) {
                         <span className="text-lg font-medium text-green-800">
                           {property.depositType === "No Deposit"
                             ? "No deposit — Rent without a deposit."
-                            : "Deposit Saver — Move in for less."}
+                            : "Deposit Saver — Pay less to move in."}
                         </span>
                       </div>
 
